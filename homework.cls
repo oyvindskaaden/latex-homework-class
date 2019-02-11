@@ -15,16 +15,22 @@
 
 % Better fonts with accents
 \RequirePackage[T1]{fontenc}
+\RequirePackage{babel}
+
 
 % Required for starred commands
 \RequirePackage{suffix}
 
-% Math symbols
+% Math and electronic symbols
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
 \RequirePackage{amsthm}
 \RequirePackage{amssymb}
+\RequirePackage{mathrsfs}
 \RequirePackage{centernot}
+\RequirePackage{siunitx}
+\RequirePackage{textcomp}
+\RequirePackage{gensymb}
 
 % Nice lists
 \RequirePackage{enumerate}
@@ -38,6 +44,17 @@
 \RequirePackage{fancyvrb}
 \RequirePackage{listings}
 
+% Drawing
+\RequirePackage{pgf}
+\RequirePackage{tikz}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usetikzlibrary{arrows}
+
+% Electronic drawing
+\RequirePackage[european, american currents, american voltages,siunitx]{circuitikz}
+\newcommand*{\eq}{=}
+
 % Conditionals
 \RequirePackage{ifthen}
 
@@ -47,7 +64,7 @@
 \ifthenelse{\equal{\@oplargemargins}{1}}{}{\RequirePackage{fullpage}}
 
 % Links
-\RequirePackage{hyperref}
+\RequirePackage[hidelinks]{hyperref}
 
 % ----- Questions -------------------------------------------------------------
 \newcounter{questionCounter}
